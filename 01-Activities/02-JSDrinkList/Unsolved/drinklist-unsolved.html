@@ -29,7 +29,7 @@
 
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
     // ...
-
+    var drinks = document.querySelector("#drink-options");
 
     // ...
 
@@ -38,6 +38,14 @@
     // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
     // ...
 
+    for (var i = 0; i < drinkList.length; i++) {
+
+      var menuItemP = document.createElement("p");   // Creates a <p> tag for each drink appended to the HTML (.append has not been written in yet)
+      
+      menuItemP.textContent = (drinkList[i]);        // Need to add notes
+
+      drinks.appendChild(menuItemP);
+    };
 
     // ...
 
