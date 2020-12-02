@@ -32,12 +32,10 @@
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
 
-      var pbjCounter = document.getElementById("#pbj");
-      var gcCounter = document.getElementById("#grilledcheese");
-      var rbCounter = document.getElementById("#roastbeef");
+      var pbjCounter = 0;
+      var gcCounter = 0;
+      var rbCounter = 0;
 
-      
-      
 
       // ...
 
@@ -47,7 +45,12 @@
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
 
-      $("#pbj")
+      $("#pbj").on("click", function() {
+
+        alert("PB&J consumption");
+        pbjCounter++;
+        alert("You've eaten " + pbjCounter + "sandwiches.");
+      });
 
       // ...
 
