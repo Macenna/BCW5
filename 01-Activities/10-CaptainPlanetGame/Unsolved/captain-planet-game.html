@@ -66,6 +66,19 @@
           </div>
         </div>
 
+        <!-- Controls (Superpower Clone) -->
+        <div id="cloneControls" class="card">
+          <h4 class="card-header">Superpowers - Clone!</h4>
+          <div class="card-body">
+            <div class="text-center">
+              <button class="btn btn-dark btn-lg man-button">
+                <span class="fa fa-one"></span> 1 man</button>
+              <button class="btn btn-info btn-lg men-button">
+                <span class="fa fa-two"></span> 2 men</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Controls (Superpower Move Controls) -->
         <div id="moveControls" class="card">
           <h4 class="card-header">Move Controls</h4>
@@ -132,6 +145,14 @@
     });
     $(".invis-button").on("click", function() {
       captainPlanet.animate({ opacity: "0.05" });
+    });
+
+    // Clone Buttons - not done ***
+    $(".man-button").on("click", function() {
+      captainPlanet.remove(".men-button");
+    });
+    $(".men-button").on("click", function() {
+      captainPlanet.clone();
     });
 
     // Move Buttons
