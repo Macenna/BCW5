@@ -78,7 +78,46 @@
 $(document).ready(function() {
 
 // Your code here...
+// Global variables = start point 
+var first = 0;
+var second = 0;
+var operation = 0;
+var result = 0;
+var isOperatorChosen = false;
+var isCalculated = false;
 
+// Use a function to initialize calculator 
+  // This way, when a user hits clear, the app will reset so operation can run again 
+function startCalc (){
+  var first = "";
+  var second = "";
+  var operation = "";
+  var result = "";
+  var isOperatorChosen = false;
+  var isCalculated = false;
+  $("#first", "#second", "#operation", "#result");
+};
+
+
+$(".number").on("click", function(){
+  // First, check to see if something is already calulated 
+  if (result){
+    return false;
+  }
+  // If operator is chosen, write the Second number, if not, write the first 
+  if (isOperatorChosen){
+    first +- $(this).val();
+    console.log("first");
+  }
+  else {
+    second +- $(this).val();
+    console.log("second");
+  }
+  $(".operation").on("click", function (){
+
+  })
+  // Unfinished 
+});
 
 });
 
